@@ -9,14 +9,20 @@ export const MenuStyle = styled.div`
     background-color: ${colors.menuBackground};
     padding: 10px;
 
-    ul{
-        list-style: none;
+    .menu-links {
+        display:inline-block;
+
+        ul{list-style: none;}
+        
+        ul li{
+            display: inline-block;
+            padding: 0 10px;
+        }
+        ul li a{
+            color: ${colors.fontColor};
+        }
     }
-    ul li{
-        display: inline-block;
-        padding: 0 10px;
-    }
-    ul li a{
-        color: ${colors.fontColor};
+    .menu-options {
+        display:inline-block; 
     }
 `;

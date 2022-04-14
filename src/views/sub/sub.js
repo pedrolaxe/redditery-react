@@ -8,14 +8,13 @@ const SubReddit = () => {
 
   useEffect(() => {
     if (subreddit) {
-      console.log(subreddit);
+      console.log("inside sub -> ",subreddit);
     } else {
       history.push('/');
     }
   }, [ history, subreddit]);
 
     return (
-      console.log(subreddit),
         <div>
           <p>
             SubReddit {subreddit}

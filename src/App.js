@@ -14,6 +14,27 @@ import GlobalStyle from './GlobalStyle';
 
 const App = () => {
     const [isConstruction, setConstruction] = useState(false);
+    const [resultsAPI, setResultsAPI] = useState([]);
+
+    // useEffect(() => {
+    //     const fetchData = async (sub, cat) => {
+    //       await axios.get('https://www.reddit.com/r/'+sub+'/'+cat+'.json')
+    
+    //         .then((response) => {
+    //             setResultsAPI(response.data['data'])
+    //             console.log(resultsAPI.children);
+              
+    //         })
+    //         .catch(error => {
+    //           console.log(error.message)
+    //           console.error("API Não Conectada")
+    //           setConstruction(true);
+    //         })
+    //   }
+    
+    //   fetchData("all", "hot");
+    // }, []);
+    
 
     return (
         <>
