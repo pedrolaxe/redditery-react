@@ -2,40 +2,43 @@ import React, { useEffect, useState, useCallback, createRef } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import './App.css';
-
-//views
-
 //components
+import Home from './views/home/home';
+import SubReddit from './views/sub/sub';
 import MainContent from './components/MainContent/MainContent';
 import Menu from './components/Menu/Menu';
 
 //others
+import './App.css';
 import GlobalStyle from './GlobalStyle';
 
 const App = () => {
     const [isConstruction, setConstruction] = useState(false);
 
     return (
-        <GlobalStyle />,
+        <>
+        <GlobalStyle />
         <MainContent>
+           
             <Router>
                 {
-                    isConstruction ?
+                isConstruction ?
                     <div style={{ textAlign: 'center', marginTop: 180 }}>
                         <h1>PÁGINA EM CONSTRUÇÃO</h1>
                     </div>
-                : (
-                    <>
-                    <Switch>
-                        <Route path="/" component={Menu} />
-                        {/* <Route component={NotFound} /> */}
-                    </Switch>
-                    </>
-                )
-                }
+                    : (
+                        <>
+                         <Menu />
+                            <Switch>
+                                <Route path="/r/:subreddit" component={SubReddit} />
+                                <Route path="/" component={Home} />
+                            </Switch>    
+                        </>
+                    )
+                    }
             </Router>
         </MainContent>
+        </>
     );
 
 }
