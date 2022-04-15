@@ -7,7 +7,7 @@ export const MenuStyle = styled.div`
     height: 40px;
     color: #FFFFFF;
     background-color: ${colors.menuBackground};
-    padding: 10px;
+    margin-bottom: 50px;
 
     .menu-links {
         display:inline-block;

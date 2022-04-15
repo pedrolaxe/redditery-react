@@ -1,7 +1,7 @@
 {
   "name": "redditery-react",
   "version": "1.0.0",
-  "description": "React Clone of Redditery",
+  "description": "Redditery with ReactJS",
   "main": "index.js",
   "repository": "https://github.com/pedrolaxe/redditery-react.git",
   "author": "Pedro Laxe <pedrolaxe@gmail.com>",

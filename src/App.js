@@ -7,6 +7,8 @@ import Home from './views/home/home';
 import SubReddit from './views/sub/sub';
 import MainContent from './components/MainContent/MainContent';
 import Menu from './components/Menu/Menu';
+import Gallery from './components/Gallery/Gallery';
+import Footer from './components/Footer/Footer';
 
 //others
 import './App.css';
@@ -16,25 +18,24 @@ const App = () => {
     const [isConstruction, setConstruction] = useState(false);
     const [resultsAPI, setResultsAPI] = useState([]);
 
-    // useEffect(() => {
-    //     const fetchData = async (sub, cat) => {
-    //       await axios.get('https://www.reddit.com/r/'+sub+'/'+cat+'.json')
+    useEffect(() => {
+        const fetchData = async (sub, category) => {
+          await axios.get('https://www.reddit.com/r/'+sub+'/'+category+'.json')
     
-    //         .then((response) => {
-    //             setResultsAPI(response.data['data'])
-    //             console.log(resultsAPI.children);
+            .then((response) => {
+                setResultsAPI(response.data['data'].children)
+                //console.log(resultsAPI);
               
-    //         })
-    //         .catch(error => {
-    //           console.log(error.message)
-    //           console.error("API Não Conectada")
-    //           setConstruction(true);
-    //         })
-    //   }
+            })
+            .catch(error => {
+              console.log(error.message)
+              console.error("Reddit API error")
+              setConstruction(true);
+            })
+      }
     
-    //   fetchData("all", "hot");
-    // }, []);
-    
+      fetchData("pics", "hot");
+    }, []);
 
     return (
         <>
@@ -50,10 +51,12 @@ const App = () => {
                     : (
                         <>
                          <Menu />
+                         <Gallery ApiData={resultsAPI} />
                             <Switch>
                                 <Route path="/r/:subreddit" component={SubReddit} />
                                 <Route path="/" component={Home} />
-                            </Switch>    
+                            </Switch>
+                         <Footer />    
                         </>
                     )
                     }
