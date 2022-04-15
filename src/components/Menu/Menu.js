@@ -50,6 +50,15 @@ const Menu = () => {
                 FUNNY
               </Link>
             </li>
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/cats",
+                }}
+              >
+                CATS
+              </Link>
+            </li>
           </ul>
         </div>
 

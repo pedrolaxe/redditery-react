@@ -3,18 +3,18 @@ import axios from 'axios';
 import { useHistory, useParams} from 'react-router-dom';
 import Gallery from '../../components/Gallery/Gallery';
 
-const SubReddit = () => {
+const User = () => {
   
   const history = useHistory();
-  const { subreddit } = useParams();
+  const { user_reddit } = useParams();
   const [resultsAPISub, setResultsAPISub] = useState([]);
 
     useEffect(() => {
-      if (subreddit.length >0) {
-        console.log("inside sub -> ",subreddit.trim());
+      if (user_reddit.length >0) {
+        console.log("inside sub -> ",user_reddit.trim());
         
         const fetchData = () => {
-          axios.get('https://www.reddit.com/r/'+subreddit.trim()+'/hot.json')
+          axios.get('https://www.reddit.com/user/'+user_reddit.trim()+'/submitted.json')
     
             .then((response) => {
               setResultsAPISub(response.data['data'].children)
@@ -29,10 +29,10 @@ const SubReddit = () => {
     }else {
       history.push('/');
     }
-    }, [history, subreddit]);
+    }, [history, user_reddit]);
 
     return (
       <Gallery ApiData={resultsAPISub} />
       )
 }
-export default SubReddit
+export default User

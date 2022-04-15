@@ -7,8 +7,9 @@ Todo:
 - [ ] Menu
 - [ ] Search
 - [ ] Sort
-- [ ] API in Subreddits or Users Page
-
+- [X] API in Subreddits or Users Page
+- [ ] Video player on User Page
+- [ ] Fix Responsive
 
 ## Installation
 ```shell
