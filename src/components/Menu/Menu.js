@@ -70,7 +70,7 @@ const Menu = () => {
               <option value="top">top</option>
             </select>
             
-            <input type="text" name="s" placeholder="search" />
+            <input type="text" name="s" placeholder="search subreddits" />
             <button type="submit">Search</button>
           </form>
         </div>

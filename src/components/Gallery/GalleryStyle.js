@@ -41,6 +41,31 @@ export const GalleryStyle = styled.div`
             border-radius: 10px;
         }
 
+        .gallery-video{
+            max-width: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gallery-video .mp4{
+            max-width: 80%;
+            border: 20px solid ${colors.menuBackground};
+            border-radius: 10px;
+        }
+
+        .gallery-textarea{
+            max-width: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gallery-textarea p{
+            max-width: 80%;
+            padding: 5px;
+            border: 20px solid ${colors.menuBackground};
+            border-radius: 10px;
+        }
+
         .gallery-infos{
             max-width: 50%;
             margin: 0 auto;

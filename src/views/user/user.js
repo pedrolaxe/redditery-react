@@ -18,6 +18,7 @@ const User = () => {
     
             .then((response) => {
               setResultsAPISub(response.data['data'].children)
+              console.log(resultsAPISub);
             })
             .catch(error => {
               console.log(error.message)
@@ -29,7 +30,7 @@ const User = () => {
     }else {
       history.push('/');
     }
-    }, [history, user_reddit]);
+    }, [history, user_reddit, resultsAPISub]);
 
     return (
       <Gallery ApiData={resultsAPISub} />
