@@ -8,6 +8,7 @@ Todo:
 - [ ] Search
 - [ ] Sort
 - [ ] Fix Responsiveness
+- [ ] Deploy to GitHub Pages
 - [X] API in Subreddits or Users Page
 - [X] Video player on User Page
 

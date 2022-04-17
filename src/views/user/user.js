@@ -18,7 +18,6 @@ const User = () => {
     
             .then((response) => {
               setResultsAPISub(response.data['data'].children)
-              console.log(resultsAPISub);
             })
             .catch(error => {
               console.log(error.message)
