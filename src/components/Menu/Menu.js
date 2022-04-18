@@ -2,24 +2,33 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import { MenuStyle } from "./MenuStyle";
-
+import LogoReddit from "../../assets/images/reddit.png";
 const Menu = () => {
   const history = useHistory();
 
-  function handleSubmit(e) {
+  // function handleSubmit(e) {
     
-    e.preventDefault();
+  //   e.preventDefault();
     
-    if(e.target.s.value.length > 0){
-      console.log('searched -> '+ e.target.s.value);
-      history.push('/r/'+e.target.s.value);}
-      e.target.s.value = '';
-  }
+  //   if(e.target.s.value.length > 0){
+  //     console.log('searched -> '+ e.target.s.value);
+  //     history.push('/r/'+e.target.s.value);}
+  //     e.target.s.value = '';
+  // }
 
   return (
     <MenuStyle>
       <div>
         <div className="menu-links">
+          <div className="reddit-logo">
+          <Link
+                to={{
+                  pathname: "/",
+                }}
+              >
+                <img src={LogoReddit} alt="logo" width="30" />
+              </Link>
+          </div>
           <ul>
             <li>
               <Link
@@ -27,20 +36,10 @@ const Menu = () => {
                   pathname: "/",
                 }}
               >
-                HOME
+                ALL
               </Link>
             </li>
-
-            <li>
-              <Link
-                to={{
-                  pathname: "/r/videos",
-                }}
-              >
-                VIDEOS
-              </Link>
-            </li>
-
+            ・
             <li>
               <Link
                 to={{
@@ -50,29 +49,145 @@ const Menu = () => {
                 FUNNY
               </Link>
             </li>
+            ・
             <li>
               <Link
                 to={{
-                  pathname: "/r/cats",
+                  pathname: "/r/pics",
                 }}
               >
-                CATS
+                PICTURES
+              </Link>
+            </li>
+            ・
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/gifs",
+                }}
+              >
+                GIFS
+              </Link>
+            </li>
+            ・
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/adviceanimals",
+                }}
+              >
+                MEMES
+              </Link>
+            </li>
+            ・
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/wtf",
+                }}
+                className="error"
+              >
+                WTF
+              </Link>
+            </li>
+            ・
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/mildlyinteresting",
+                }}
+              >
+                INTERESTING
+              </Link>
+            </li>
+            ・
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/aww",
+                }}
+              >
+                CUTE
+              </Link>
+            </li>
+            ・
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/gaming",
+                }}
+              >
+                GAMING
+              </Link>
+            </li>
+            ・
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/earthporn",
+                }}
+              >
+                EARTH
+              </Link>
+            </li>
+            ・
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/roomporn",
+                }}
+              >
+                ROOMS
+              </Link>
+            </li>
+            ・
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/food",
+                }}
+              >
+                FOOD
+              </Link>
+            </li>
+            ・
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/art",
+                }}
+              >
+                ART
               </Link>
             </li>
           </ul>
-        </div>
+        </div> 
 
         <div className="menu-options">
-          <form onSubmit={handleSubmit}>
-            <select>
-              <option value="hot">hot</option>
-              <option value="new">new</option>
-              <option value="top">top</option>
+          {/* <form onSubmit={handleSubmit}> */}
+            <ul>
+            <li>
+              <Link
+                to={{
+                  pathname: "/r/new",
+                }}
+              >
+                  NEW
+              </Link>
+            </li>
+            ・ BEST OF :
+          </ul>
+            
+            <select defaultValue={'DEFAULT'}>
+              <option value="DEFAULT" disabled>-</option>
+              <option value="day">TODAY</option>
+              <option value="week">THIS WEEK</option>
+              <option value="month">THIS MONTH</option>
+              <option value="year">THIS YEAR</option>
+              <option value="all">ALL TIME</option>
             </select>
             
-            <input type="text" name="s" placeholder="search subreddits" />
-            <button type="submit">Search</button>
-          </form>
+          {/* </form> */}
         </div>
 
       </div>

@@ -7,4 +7,5 @@ export const colors = {
   darkGray: '#A6A5A5',
   menuBackground: '#222222',
   fontColor: '#FFFFFF',
+  rightMenu: '#888888',
 };

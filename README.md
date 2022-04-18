@@ -4,11 +4,11 @@ Inspiration for this project was the [redditery.com](https://www.redditery.com) 
 
 Todo:
 - [ ] Infinite Scroll
-- [ ] Menu
-- [ ] Search
+- [ ] Expand Menu
 - [ ] Sort
 - [ ] Fix Responsiveness
 - [ ] Deploy to GitHub Pages
+- [X] Menu
 - [X] API in Subreddits or Users Page
 - [X] Video player on User Page
 

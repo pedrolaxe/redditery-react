@@ -2,15 +2,25 @@ import styled from 'styled-components';
 
 import { colors } from '../../ui/variables';
 
-export const MenuStyle = styled.div`
+export const MenuStyle = styled.div` 
     width: 100%;
-    height: 40px;
+    height: 70px;
+    font-size: 11px;
+    box-shadow: black 0 0 20px;
     color: #FFFFFF;
     background-color: ${colors.menuBackground};
     margin-bottom: 50px;
 
     .menu-links {
-        display:inline-block;
+        position: absolute;
+        left: 0;
+        margin: 5px 0 0px 5px;
+
+        .reddit-logo {
+            position: absolute;
+            top: 3px;
+            left: 8px;
+        }
 
         ul{list-style: none;}
         
@@ -20,9 +30,44 @@ export const MenuStyle = styled.div`
         }
         ul li a{
             color: ${colors.fontColor};
+            text-decoration: none;
+            
+            &:hover{
+                border-bottom: 1px solid;
+                text-shadow: none;
+            }
+            .error{
+                color: red;
+            }
+        }
+        
+        .error{
+            color: red;
         }
     }
     .menu-options {
-        display:inline-block; 
+        position: absolute;
+        right: 20px;
+        top: 5px;
+        text-align: right;
+        color: ${colors.rightMenu};
+        
+        ul{list-style: none;display: inline-block;}
+        
+        ul li{
+            display: inline-block;
+            padding: 0 10px;
+        }
+        a{
+            color: ${colors.rightMenu};
+            text-decoration: none;
+            
+            &:hover{
+                border-bottom: 1px solid;
+                text-shadow: none;
+            }
+        }
+
+    }
     }
 `;
