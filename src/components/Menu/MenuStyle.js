@@ -9,12 +9,14 @@ export const MenuStyle = styled.div`
     box-shadow: black 0 0 20px;
     color: #FFFFFF;
     background-color: ${colors.menuBackground};
-    margin-bottom: 50px;
+    position: fixed;
+    top: 0;
 
     .menu-links {
         position: absolute;
         left: 0;
         margin: 5px 0 0px 5px;
+        max-width: 650px;
 
         .reddit-logo {
             position: absolute;
@@ -26,7 +28,7 @@ export const MenuStyle = styled.div`
         
         ul li{
             display: inline-block;
-            padding: 0 10px;
+            padding: 0 10px 5px;
         }
         ul li a{
             color: ${colors.fontColor};

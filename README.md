@@ -7,7 +7,6 @@ Todo:
 - [ ] Expand Menu
 - [ ] Sort
 - [ ] Fix Responsiveness
-- [ ] Deploy to GitHub Pages
 - [X] Menu
 - [X] API in Subreddits or Users Page
 - [X] Video player on User Page
@@ -22,5 +21,9 @@ Running:
 ```shell
     yarn start
 ```
+
+## Demo
+
+[redditery-react.vercel.app](https://redditery-react.vercel.app/)
 
 Written by Pedro Laxe
