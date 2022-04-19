@@ -2,17 +2,21 @@
 
 Inspiration for this project was the [redditery.com](https://www.redditery.com) website.
 
-Todo:
+To-do:
 - [ ] Infinite Scroll
 - [ ] Expand Menu
 - [ ] Sort
 - [ ] Fix Responsiveness
-- [X] Menu
-- [X] API in Subreddits or Users Page
-- [X] Video player on User Page
+- [ ] Fix videoplayer
 
 
 ## Installation
+Clone the repository:
+
+```shell
+git clone https://github.com/pedrolaxe/redditery-react.git
+```
+
 ```shell
     yarn install
 ```

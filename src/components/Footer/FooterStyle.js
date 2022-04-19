@@ -16,4 +16,7 @@ export const FooterStyle = styled.div`
         color: ${colors.fontColor};
         text-decoration: none;
     }
+    .gray{
+        color: ${colors.rightMenu};
+    }
 `;
