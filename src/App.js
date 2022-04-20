@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './views/home/home';
 import SubReddit from './views/sub/sub';
 import User from './views/user/user';
+import notFound from './views/notFound/notFound';
 import MainContent from './components/MainContent/MainContent';
 import Menu from './components/Menu/Menu';
 import Footer from './components/Footer/Footer';
@@ -34,7 +35,8 @@ const App = () => {
                             <Switch>
                                 <Route path="/r/:subreddit" component={SubReddit} />
                                 <Route path="/user/:user_reddit" component={User} />
-                                <Route path="/" component={Home} />
+                                <Route exact path="/" component={Home} />
+                                <Route component={notFound} />
                             </Switch>
                          <Footer />    
                         </>
